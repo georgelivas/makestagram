@@ -57,7 +57,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Register or Log In"/>
                                 <connections>
-                                    <action selector="loginButtonTapped:" destination="765-tT-l8z" eventType="touchUpInside" id="57Z-2J-SHo"/>
+                                    <action selector="loginButtonTapped:" destination="765-tT-l8z" eventType="touchUpInside" id="bgz-6u-4fv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,7 +75,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oZw-Gk-SM7"/>
                     <connections>
-                        <outlet property="loginButton" destination="6gs-1m-xUF" id="rmG-Dp-JRa"/>
+                        <outlet property="loginButton" destination="6gs-1m-xUF" id="iG7-kQ-gef"/>
                         <segue destination="XV5-QN-bPz" kind="show" identifier="toCreateUsername" id="Ei6-XF-Yoo"/>
                     </connections>
                 </viewController>
@@ -138,7 +138,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="XV5-QN-bPz" eventType="touchUpInside" id="A47-pc-8hk"/>
+                                    <action selector="nextButtonTapped:" destination="XV5-QN-bPz" eventType="touchUpInside" id="dTK-Dv-K9G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -155,8 +155,8 @@
                         <viewLayoutGuide key="safeArea" id="fZc-ZY-BPC"/>
                     </view>
                     <connections>
-                        <outlet property="nextButton" destination="iON-J9-67r" id="Fig-xn-3Sn"/>
-                        <outlet property="usernameTextField" destination="10H-Xe-ZRe" id="J8G-Us-Pag"/>
+                        <outlet property="nextButton" destination="iON-J9-67r" id="QNp-m0-wKd"/>
+                        <outlet property="usernameTextField" destination="10H-Xe-ZRe" id="7lb-Hj-6DN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3E-ud-Gdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
