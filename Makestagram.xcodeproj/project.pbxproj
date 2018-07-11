@@ -15,6 +15,10 @@
 		814252CD20F3CCA6007B9F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814252CB20F3CCA6007B9F1E /* LaunchScreen.storyboard */; };
 		814252DF20F3DA12007B9F1E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814252DE20F3DA12007B9F1E /* Login.storyboard */; };
 		814252E320F3DBCC007B9F1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814252E220F3DBCC007B9F1E /* LoginViewController.swift */; };
+		816D196920F52D6500767C0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D196820F52D6500767C0E /* User.swift */; };
+		816D196B20F532C600767C0E /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D196A20F532C600767C0E /* CreateUsernameViewController.swift */; };
+		816D196D20F5480A00767C0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 816D196C20F5480A00767C0E /* GoogleService-Info.plist */; };
+		816D196F20F54EC400767C0E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D196E20F54EC400767C0E /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +31,12 @@
 		814252C920F3CCA6007B9F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		814252CC20F3CCA6007B9F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		814252CE20F3CCA6007B9F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		814252D420F3D2A7007B9F1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		814252DE20F3DA12007B9F1E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		814252E220F3DBCC007B9F1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		816D196820F52D6500767C0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		816D196A20F532C600767C0E /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		816D196C20F5480A00767C0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		816D196E20F54EC400767C0E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F9D6BF8D3F724569C08C3751 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +100,7 @@
 			children = (
 				814252C420F3CCA6007B9F1E /* ViewController.swift */,
 				814252E220F3DBCC007B9F1E /* LoginViewController.swift */,
+				816D196A20F532C600767C0E /* CreateUsernameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 		814252D920F3D875007B9F1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				816D196820F52D6500767C0E /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,6 +130,7 @@
 		814252DA20F3D87D007B9F1E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				816D196E20F54EC400767C0E /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -138,7 +148,7 @@
 		814252DC20F3D88D007B9F1E /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				814252D420F3D2A7007B9F1E /* GoogleService-Info.plist */,
+				816D196C20F5480A00767C0E /* GoogleService-Info.plist */,
 				814252CE20F3CCA6007B9F1E /* Info.plist */,
 			);
 			path = Supporting;
@@ -190,7 +200,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "George Livas";
 				TargetAttributes = {
 					814252BE20F3CCA6007B9F1E = {
@@ -224,6 +234,7 @@
 			files = (
 				814252DF20F3DA12007B9F1E /* Login.storyboard in Resources */,
 				814252CD20F3CCA6007B9F1E /* LaunchScreen.storyboard in Resources */,
+				816D196D20F5480A00767C0E /* GoogleService-Info.plist in Resources */,
 				814252CA20F3CCA6007B9F1E /* Assets.xcassets in Resources */,
 				814252C820F3CCA6007B9F1E /* Main.storyboard in Resources */,
 			);
@@ -299,8 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816D196920F52D6500767C0E /* User.swift in Sources */,
 				814252E320F3DBCC007B9F1E /* LoginViewController.swift in Sources */,
+				816D196F20F54EC400767C0E /* UserService.swift in Sources */,
 				814252C520F3CCA6007B9F1E /* ViewController.swift in Sources */,
+				816D196B20F532C600767C0E /* CreateUsernameViewController.swift in Sources */,
 				814252C320F3CCA6007B9F1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +355,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -348,6 +363,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -398,6 +414,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -405,6 +422,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
