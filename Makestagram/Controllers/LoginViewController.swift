@@ -50,19 +50,6 @@ class LoginViewController: UIViewController {
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         
-//        userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
-//            if let _ = User(snapshot: snapshot) {
-//                let storyboard = UIStoryboard(name: "Main", bundle: .main)
-//
-//                if let initialViewController = storyboard.instantiateInitialViewController() {
-//                    self.view.window?.rootViewController = initialViewController
-//                    self.view.window?.makeKeyAndVisible()
-//                }
-//            } else {
-//                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
-//            }
-//        })
-        
         if let error = error {
             assertionFailure("Error signing in: \(error.localizedDescription)")
             return
@@ -77,17 +64,33 @@ extension LoginViewController: FUIAuthDelegate {
         
         // 3
         userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
-            if let _ = User(snapshot: snapshot) {
-                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            if let user = User(snapshot: snapshot) {
+                User.setCurrent(user)
                 
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            } else {
+                // 1
+                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
+            }
+        })
+        
+        UserService.show(forUID: user.uid) { (user) in
+            if let user = user {
+                // handle existing user
+                User.setCurrent(user)
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
                 if let initialViewController = storyboard.instantiateInitialViewController() {
                     self.view.window?.rootViewController = initialViewController
                     self.view.window?.makeKeyAndVisible()
                 }
             } else {
+                // handle new user
                 self.performSegue(withIdentifier: "toCreateUsername", sender: self)
             }
-        })
+        }
     }
     
 }
